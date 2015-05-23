@@ -114,7 +114,6 @@ body {
 	text-align: center;
 	background-color: black;
   	color: #F9F9F9;
-  	margin: 0 35%;
   	padding: 20px 0;
   	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -185,4 +184,8 @@ p {
 .heading {
 	font-size: 22pt;
 	margin: 40px 0 20px 0;
+}
+
+.row {
+	height:100%;
 }
