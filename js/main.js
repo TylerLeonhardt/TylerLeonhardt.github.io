@@ -1,4 +1,4 @@
-if($( window ).width() >1000){
+if($( window ).width() >992){
 	$(function(){
 		$.stellar({
 			horizontalScrolling: false,
