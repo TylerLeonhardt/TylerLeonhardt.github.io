@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="bower_components/tooltipster/css/tooltipster.css"/>
+	<link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/stellar/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+		});
+
+		$(document).ready(function() {
+            $('.tooltip').tooltipster({
+            	position: "bottom"
+            });
+        });
+	</script>
+</head>
+
+<body>
+	<!-- code -->
+	<div class="parallax1" data-stellar-background-ratio="1"></div>
+		
+	<div style="padding-top:7px;">
+
+		<!-- hello world -->
+		<div class="hello">
+			<div class="center-middle">Hello World!</div>
+			<div class="center-bottom"><i class="fa fa-sort-desc"></i></div>
+		</div>
+		
+		<!-- shadow -->
+		<div class="parallax3" data-stellar-background-ratio="0.5">
+			<div class="container">
+				
+				<div class="col-md-4 card">
+					<i class="fa fa-book fa-3x center-icon"></i>
+					<div class="heading">I'm a Computer Science Major at the University of Central Florida!</div>
+					<p>I love technology! More specifically, I have a passion in web app development, mobile development and the future of wearables.</p>
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- blank -->
+		<div class="container center-text"></div>
+
+		<!-- ceiling -->
+		<div class="parallax2" data-stellar-background-ratio="0.5">
+			<div class="container">
+			
+				<div class="col-md-offset-8 col-md-4 card">
+					<i class="fa fa-laptop fa-3x center-icon"></i>
+					<div class="heading">I code everyday! And I love it!</div>
+					<p>Like learning any language, practice makes perfect! I try to code everyday, mainly side projects outside of school.</p>
+					<p>My favorite programming languages are JavaScript and Java!</p>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- blank -->
+		<div class="container center-text"></div>
+
+		<!-- me -->
+		<div class="parallaxMe" data-stellar-background-ratio="0.5">
+			<div class="connect center-bottom">
+				<a href="https://github.com/tylerl0706" class="tooltip" title="GitHub"><i class="fa fa-github-square fa-3x margin-right-and-left"></i></a>
+				<a href="https://www.linkedin.com/in/tylerjamesleonhardt" class="tooltip" title="LinkedIn"><i class="fa fa-linkedin-square fa-3x margin-right-and-left"></i></a>
+				<a href="https://plus.google.com/+TylerJamesLeonhardt" class="tooltip" title="Google+"><i class="fa fa-google-plus-square fa-3x margin-right-and-left"></i></a>
+				<a href="https://drive.google.com/file/d/0Bzvq50_jhyTbZ1JxOG11N0J5bXc/view?usp=sharing" class="tooltip" title="Resume"><i class="fa fa-external-link-square fa-3x margin-right-and-left"></i></a>
+				<div class="margin-top font-size-14">Connect with me?</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

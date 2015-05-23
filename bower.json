@@ -1,0 +1,16 @@
+{
+  "name": "personal_website",
+  "version": "0.0.0",
+  "authors": [
+    "tylerl0706 <tylerl0706@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
