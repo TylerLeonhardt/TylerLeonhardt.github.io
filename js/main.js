@@ -1,5 +1,4 @@
-var mq = window.matchMedia( "(min-width: 900px)" );
-if(mq.matches){
+if($( window ).width() >950){
 	$(function(){
 		$.stellar({
 			horizontalScrolling: false,
@@ -14,5 +13,5 @@ if(mq.matches){
 	});
 }else{
 
-	
+
 }
