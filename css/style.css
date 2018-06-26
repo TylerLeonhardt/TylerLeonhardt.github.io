@@ -66,6 +66,14 @@ footer {
     color: #A24CA1;
 }
 
+.powershell {
+    color:#000000;
+}
+
+.powershell:hover {
+    color:#4F88E7;
+}
+
 .headshot {
     border-radius:50%;
     object-fit: cover;
