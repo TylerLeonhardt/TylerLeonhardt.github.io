@@ -1,9 +1,13 @@
+/*
+GENERAL STYLE
+*/
+
 html {
-    text-align:center
+    text-align:center;
 }
 
 h1{
-    font-family:monospace
+    font-family:monospace;
 }
 
 body {
@@ -29,6 +33,22 @@ footer {
     padding: 15px 0;
 }
 
+.headshot {
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+/*
+EFFECTS
+*/
+
+/*
+Hover color changing effect
+*/
 .hoverease {
     transition: all .25s ease-in;
     -o-transition: all .2s ease-in;
@@ -42,6 +62,8 @@ footer {
     -moz-transition: all .25s ease-out;
     -webkit-transition: all .25s ease-out;
 }
+
+/*The colors for the hover effect*/
 .connect {
     font-size: 40px;
     color: #F9F9F9;
@@ -74,7 +96,90 @@ footer {
     color:#4F88E7;
 }
 
-.headshot {
-    border-radius:50%;
-    object-fit: cover;
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+.fade-in {
+    opacity:0;
+    opacity: 1 \9; /*just in case ie*/
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.fade-in.one {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+.fade-in.three {
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.fade-in.four {
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.fade-in.five {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay:1.2s;
+    animation-delay: 1.2s;
+}
+
+.fade-in.six {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.fade-in.seven {
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+
+.fade-in.eight {
+    -webkit-animation-delay: 2.1s;
+    -moz-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+.fade-in.nine {
+    -webkit-animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.fade-in.ten {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+    animation-delay: 2.7s;
+}
+.fade-in.eleven {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.fade-in.twelve {
+    -webkit-animation-delay: 3.3s;
+    -moz-animation-delay: 3.3s;
+    animation-delay: 3.3s;
 }

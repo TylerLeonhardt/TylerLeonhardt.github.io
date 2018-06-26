@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Favicons and title -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -17,39 +18,62 @@
     <link rel="manifest" href="img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-
     <meta name="theme-color" content="#404040">
+    <title>Tyler Leonhardt</title>
+
+    <!-- Mobile friendly and use UTF-8 for emojis -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
+    <!-- bring in flexbox and font awesome -->
+    <!-- TODO: pull these in from npm -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+    <!-- General Styles -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <title>Tyler Leonhardt</title>
 </head>
 
 <body>
-    <main class="Site-content"><p style="font-size: 40px">👋</p>
-        <p><img src="img/headshot.jpg" alt="headshot" width="200" height="200" class="headshot"></p>
-        <h1>I'm Tyler</h1>
+    <main>
+        <p class="fade-in one" style="font-size: 40px">👋</p>
+        <p><img src="img/headshot.jpg" alt="headshot" width="200" height="200" class="headshot fade-in four"></p>
+        <h1 class="fade-in four">I'm Tyler</h1>
         <br/>
-        <div class="row" style="max-width: 300px; margin: 0 auto;">
-            <div class="col-xs"><a class="fas fa-terminal" style="font-size: 40px; color:#4F88E7" href="https://github.com/powershell"></a></div>
-            <div class="col-xs"><i class="fas fa-at" style="font-size: 40px"></i></div>
-            <div class="col-xs"><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Microsoft-512.png" style="display: inline;" width="40px" alt=""></div>
+        <div class="centered row fade-in six" style="max-width: 300px;">
+            <div class="col-xs">
+                <a class="fas fa-terminal" style="font-size: 40px; color:#4F88E7" href="https://github.com/powershell"></a>
+            </div>
+            <div class="col-xs">
+                <i class="fas fa-at" style="font-size: 40px"></i>
+            </div>
+            <div class="col-xs">
+                <!-- TODO: download image -->
+                <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Microsoft-512.png" style="display: inline;" width="40px" alt="">
+            </div>
         </div>
         <br/>
-        <h1 style="max-width: 400px; margin: 0 auto;">I work on the <a class="powershell hoverease" href="https://github.com/tylerl0706">PowerShell</a> team at Microsoft.<br/><br/> All my work is <a class="github hoverease" href="https://github.com/tylerl0706">open source</a>. Sometimes people give me a mic and I talk about 💻.<br/><br/> I also like ☕️ with the word "mouthfeel" on the packaging.</h1>
-        <br/>
-        <br/>
-        <br/>
-        <br/></main>
-    <footer><div class="row" style="max-width: 500px; margin: 0 auto;">
-            <div class="col-xs"><a class="box fab fa-github connect hoverease" href="https://github.com/tylerl0706"></a></div>
-            <div class="col-xs"><a class="box fab fa-twitter connect hoverease" href="https://twitter.com/TylerLeonhardt"></a></div>
-            <div class="col-xs"><a class="box fab fa-linkedin connect hoverease" href="https://www.linkedin.com/in/tylerjamesleonhardt/"></a></div>
-        </div></footer>
+        <h1 class="centered fade-in seven" style="max-width: 400px;">
+            I work on the <a class="powershell hoverease" href="https://github.com/tylerl0706">PowerShell</a> team at Microsoft.
+            <br/><br/>
+            All my work is <a class="github hoverease" href="https://github.com/tylerl0706">open source</a>. 
+            Sometimes people give me a mic and I talk about 💻.
+            <br/><br/>
+            I also like ☕️ with the word "mouthfeel" on the packaging.</h1>
+        <br/><br/><br/><br/>
+    </main>
+    <footer>
+        <div class="centered row" style="max-width: 500px;">
+            <div class="col-xs fade-in ten">
+                <a class="box fab fa-github connect hoverease" href="https://github.com/tylerl0706"></a>
+            </div>
+            <div class="col-xs fade-in eleven">
+                <a class="box fab fa-twitter connect hoverease" href="https://twitter.com/TylerLeonhardt"></a>
+            </div>
+            <div class="col-xs fade-in twelve">
+                <a class="box fab fa-linkedin connect hoverease" href="https://www.linkedin.com/in/tylerjamesleonhardt/"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
