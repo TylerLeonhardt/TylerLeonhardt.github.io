@@ -83,11 +83,22 @@ Hover color changing effect
     color: #A24CA1;
 }
 
+.fa-twitch:hover {
+    color: #6441a5;
+}
+
 .github {
     color: #000000;
 }
 .github:hover {
     color: #A24CA1;
+}
+
+.twitch {
+    color: #000000;
+}
+.twitch:hover {
+    color: #6441a5;
 }
 
 .powershell {
