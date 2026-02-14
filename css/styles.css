@@ -41,6 +41,12 @@ main {
     max-width: 460px;
     margin: 30px auto 40px;
     padding: 10px 10px;
+    text-align: left;
+}
+
+.card h1,
+.card .logo-icons {
+    text-align: center;
 }
 
 footer {
