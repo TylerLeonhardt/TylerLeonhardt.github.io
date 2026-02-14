@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #F9F9F9;
+    background-color: #E0E0E0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -34,19 +34,39 @@ main {
     padding: 0 10px;
 }
 
+.card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10);
+    max-width: 460px;
+    margin: 30px auto 40px;
+    padding: 10px 10px;
+}
+
 footer {
-    background-color: #404040;
-    color: #F9F9F9;
+    background-color: #E0E0E0;
+    color: #404040;
     padding: 15px 0;
 }
 
 .headshot {
-    border-radius:50%;
+    border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .centered {
     margin: 0 auto;
+}
+
+.logo-icons {
+    padding: 10px 0;
+    align-items: center;
+}
+
+.logo-icons img,
+.logo-icons i {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
 }
 
 /*
@@ -73,7 +93,8 @@ Hover color changing effect
 /*The colors for the hover effect*/
 .connect {
     font-size: 40px;
-    color: #F9F9F9;
+    color: #404040;
+    text-decoration: none;
 }
 
 .fa-linkedin:hover {
@@ -88,8 +109,8 @@ Hover color changing effect
     color: #A24CA1;
 }
 
-.fa-twitch:hover {
-    color: #6441a5;
+.fa-bluesky:hover {
+    color: #0085ff;
 }
 
 .github {
@@ -103,7 +124,7 @@ Hover color changing effect
     color: #000000;
 }
 .twitch:hover {
-    color: #6441a5;
+    color: #cc0000;
 }
 
 .vscode {
@@ -125,6 +146,12 @@ Hover color changing effect
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    30% { transform: translateY(0); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .fade-in {
     opacity:0;
     opacity: 1 \9; /*just in case ie*/
@@ -141,7 +168,16 @@ Hover color changing effect
     animation-duration:1s;
 }
 
-.fade-in.one {
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeInUp ease-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.fade-in.one,
+.fade-in-up.one {
     -webkit-animation-delay: 0.1s;
     -moz-animation-delay: 0.1s;
     animation-delay: 0.1s;
@@ -158,7 +194,8 @@ Hover color changing effect
     -moz-animation-delay: .6s;
     animation-delay: .6s;
 }
-.fade-in.four {
+.fade-in.four,
+.fade-in-up.four {
     -webkit-animation-delay: .9s;
     -moz-animation-delay: .9s;
     animation-delay: .9s;
@@ -170,7 +207,8 @@ Hover color changing effect
     animation-delay: 1.2s;
 }
 
-.fade-in.six {
+.fade-in.six,
+.fade-in-up.six {
     -webkit-animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
     animation-delay: 1.5s;
