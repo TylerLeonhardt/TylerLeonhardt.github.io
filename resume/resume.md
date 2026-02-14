@@ -29,7 +29,7 @@ https://tylerleonhardt.com **•** me@tylerleonhardt.com **•** https://github.
 * Extended ingestion & search indexing services for the Xbox, Windows (and more) Store
 
 ---
-##### Additional Familiarity: GitHub Actions, Azure Pipelines, OAuth, Markdown, Electron, integrating LLMs, public speaking, improv, latte art
+##### Additional Familiarity: GitHub Actions, Azure Pipelines, OAuth, Markdown, Electron, integrating LLMs, public speaking, travel (40+ countries!), improv, latte art
 
 ## Previous Work
 
