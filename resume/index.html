@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume — Tyler Leonhardt</title>
+
+    <!-- Favicons (shared with main site) -->
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png?v=1">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=1">
+    <meta name="theme-color" content="#404040">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Markdown renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+
+    <style>
+        /* #region Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        @font-face {
+            font-family: "Comic Neue";
+            src: url(/ComicNeue-Light.ttf) format("truetype");
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        /* #endregion */
+
+        /* #region Page Container */
+        .resume-page {
+            max-width: 820px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 60px 64px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+        /* #endregion */
+        .resume-content h1 {
+            font-family: "Alegreya", serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #111;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .resume-content h1::after {
+            content: "👨‍💻";
+        }
+
+        .resume-content h1 + p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .resume-content h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #333;
+            border-bottom: 2px solid #111;
+            padding-bottom: 4px;
+            margin-top: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .resume-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111;
+            margin-top: 1.2rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .resume-content p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-align: justify;
+            text-align-last: justify;
+        }
+
+        .resume-content ul {
+            padding-left: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .resume-content li {
+            font-size: 0.95rem;
+            margin-bottom: 0.1rem;
+            line-height: 1.3;
+        }
+
+        .resume-content hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 1rem 0;
+        }
+
+        .resume-content a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .resume-content a:hover {
+            text-decoration: underline;
+        }
+
+        .resume-content strong {
+            font-weight: 600;
+        }
+
+        .resume-content blockquote {
+            margin: 0 0 0.4rem 0;
+            padding: 0;
+            border: none;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .resume-content blockquote p {
+            text-align: left;
+            text-align-last: left;
+        }
+
+        .resume-content blockquote strong {
+            font-weight: 400;
+            color: #444;
+        }
+        /* #endregion */
+
+        /* #region Tables */
+        .resume-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .resume-content td {
+            padding: 0.1rem 0.4rem;
+            line-height: 1.2;
+        }
+        /* #endregion */
+
+        /* #region Back Link */
+        .back-link {
+            display: inline-block;
+            margin: 20px auto 0;
+            padding: 0 64px;
+            max-width: 820px;
+            font-size: 0.85rem;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #111;
+        }
+        /* #endregion */
+
+        /* #region Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem 0;
+            color: #999;
+            font-size: 0.95rem;
+        }
+        /* #endregion */
+
+        /* #region Print Styles */
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .resume-page {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .back-link {
+                display: none;
+            }
+
+            .resume-content h2 {
+                break-after: avoid;
+            }
+
+            .resume-content h3 {
+                break-after: avoid;
+            }
+
+            .resume-content ul, .resume-content p {
+                break-inside: avoid;
+            }
+
+            a[href]::after {
+                content: none;
+            }
+        }
+        /* #endregion */
+
+        /* #region Responsive */
+        @media (max-width: 600px) {
+            .resume-page {
+                margin: 0;
+                padding: 32px 24px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .back-link {
+                padding: 0 24px;
+            }
+        }
+        /* #endregion */
+    </style>
+</head>
+<body>
+    <a class="back-link" href="/">&larr; tylerleonhardt.com</a>
+    <div class="resume-page">
+        <div class="resume-content">
+            <div class="loading">Loading resume...</div>
+        </div>
+    </div>
+
+    <script>
+        fetch('resume.md')
+            .then(response => response.text())
+            .then(md => {
+                document.querySelector('.resume-content').innerHTML = marked.parse(md);
+            })
+            .catch(() => {
+                document.querySelector('.resume-content').innerHTML =
+                    '<p style="color:#c00">Failed to load resume.</p>';
+            });
+    </script>
+</body>
+</html>
